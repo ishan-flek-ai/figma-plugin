@@ -1,26 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
+    "useDefineForClassFields": true,
     "module": "esnext",
-    "strict": true,
-    "esModuleInterop": true,
     "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "allowJs": true,
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
     "resolveJsonModule": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@figma"
-    ]
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "plugin"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

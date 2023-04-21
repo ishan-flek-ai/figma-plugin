@@ -9,9 +9,8 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:react/recommended',
+    'plugin:vue/recommended',
     'plugin:json/recommended',
-    'plugin:react/jsx-runtime',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -22,7 +21,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['vue', '@typescript-eslint'],
   rules: {
     // ts will check these rule
     'no-undef': 'off',
