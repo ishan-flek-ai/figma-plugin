@@ -1,0 +1,69 @@
+{
+  "name": "figma-plugin-vite-react-template",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Pengsha Ying <yingfusheng@foxmail.com>",
+  "description": "Quick start a Figma plugin using Vite and React.",
+  "repository": "git@github.com:yingpengsha/figma-plugin-vite-react-template.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
+    "dev:restartPlugin": "esno scripts/restartPlugin.ts",
+    "dev:prepare": "esno scripts/prepare.ts",
+    "dev:web": "vite build --mode=development",
+    "dev:js": "vite build --mode=development --config=vite.config.code.ts",
+    "---------": "",
+    "build": "cross-env NODE_ENV=production run-s clear build:*",
+    "build:prepare": "esno scripts/prepare.ts",
+    "build:web": "vite build",
+    "build:js": "vite build --config=vite.config.code.ts",
+    "----------": "",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx,json}\"",
+    "clear": "rimraf plugin/**",
+    "prepare": "husky install",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.39.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/lodash-es": "^4.17.5",
+    "@types/node": "^16.10.2",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "@vitejs/plugin-react": "^1.1.0",
+    "chokidar": "^3.5.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-define-config": "^1.0.9",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.27.1",
+    "esno": "0.10.0",
+    "fs-extra": "^10.0.0",
+    "husky": "^7.0.2",
+    "kolorist": "^1.5.0",
+    "lint-staged": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.14",
+    "vite-plugin-singlefile": "^0.5.1"
+  }
+}
