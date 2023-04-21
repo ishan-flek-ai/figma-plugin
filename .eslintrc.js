@@ -5,26 +5,24 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
     'standard',
     'plugin:react/recommended',
     'plugin:json/recommended',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     // ts will check these rule
     'no-undef': 'off',
@@ -36,6 +34,6 @@ module.exports = {
 
     // note you must disable the base rule as it can report incorrect errors
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error']
-  }
+    '@typescript-eslint/no-use-before-define': ['error'],
+  },
 }

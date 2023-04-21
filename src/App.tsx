@@ -10,7 +10,10 @@ const App = () => {
 
   const onCreate = () => {
     const count = parseInt(textbox.current?.value || '', 10)
-    parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+    parent.postMessage(
+      { pluginMessage: { type: 'create-rectangles', count } },
+      '*'
+    )
   }
 
   const onCancel = () => {
