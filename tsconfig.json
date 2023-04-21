@@ -3,16 +3,25 @@
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "strict": true,
-    "jsx": "preserve",
+    "esModuleInterop": true,
     "sourceMap": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "baseUrl": "./",
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "plugin"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
