@@ -1,5 +1,9 @@
 # figma-plugin-vite-react-template
 
+## Has built in support for multiple frameworks by default
+- Just find the branch for your specific framework
+
+
 ## 📦 Install
 
 ```bash
