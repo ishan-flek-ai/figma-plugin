@@ -1,10 +1,10 @@
 {
-  "name": "figma-plugin-vite-react-template",
+  "name": "figma-plugin-vite",
   "version": "0.0.1",
   "license": "MIT",
-  "author": "Pengsha Ying <yingfusheng@foxmail.com>",
-  "description": "Quick start a Figma plugin using Vite and React.",
-  "repository": "git@github.com:yingpengsha/figma-plugin-vite-react-template.git",
+  "author": "Ishan Sharma <ishan@flek.ai>",
+  "description": "Quick start a Figma plugin using Vite",
+  "repository": "git@github.com:ishan-flek-ai/figma-plugin-vite.git",
   "publishConfig": {
     "access": "public"
   },
