@@ -5,10 +5,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 const config = defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   return {
-    plugins: [
-      reactPlugin(),
-      viteSingleFile()
-    ],
+    plugins: [reactPlugin(), viteSingleFile()],
     build: {
       outDir: 'plugin/ui',
       minify: !isDev,
@@ -18,10 +15,10 @@ const config = defineConfig(({ mode }) => {
       assetsInlineLimit: 100000000,
       rollupOptions: {
         output: {
-          manualChunks: () => 'everything.js'
-        }
-      }
-    }
+          // Add rollup output options here if required
+        },
+      },
+    },
   }
 })
 
