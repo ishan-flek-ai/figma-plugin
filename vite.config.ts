@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-import reactPlugin from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 
 const config = defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   return {
-    plugins: [reactPlugin(), viteSingleFile()],
+    plugins: [vue(), viteSingleFile()],
     build: {
       outDir: 'plugin/ui',
       minify: !isDev,
