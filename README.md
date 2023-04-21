@@ -1,7 +1,8 @@
 # figma-plugin-vite-react-template
 
-## Has built in support for multiple frameworks by default
+## Has built in support for multiple frameworks
 - Just find the branch for your specific framework
+- By default react is used
 
 
 ## 📦 Install
